@@ -139,7 +139,7 @@ int zmk_endpoints_send_volume_knob_report_alt() {
 
 #if IS_ENABLED(CONFIG_ZMK_HID_IO_PLOVER_HID)
 int zmk_endpoints_send_plover_hid_report_alt() {
-    struct zmk_endpoint_instance current_instance = zmk_endpoint_get_selected();
+    struct zmk_endpoint_instance current_instance = zmk_endpoints_selected();
 
     switch (current_instance.transport) {
 #if IS_ENABLED(CONFIG_ZMK_USB)
